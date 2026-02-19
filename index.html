@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaGuide | Справочник лекарств</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fa-solid fa-pills"></i> PharmaGuide
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Поиск препарата...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="filters">
+        <div class="container">
+            <button class="filter-btn active" data-category="all">Все</button>
+            <button class="filter-btn" data-category="painkillers">Обезболивающие</button>
+            <button class="filter-btn" data-category="antibiotics">Антибиотики</button>
+            <button class="filter-btn" data-category="vitamins">Витамины</button>
+            <button class="filter-btn" data-category="cold">От простуды</button>
+        </div>
+    </section>
+
+    <main class="container">
+        <div id="drugGrid" class="drug-grid">
+            </div>
+        <div id="noResults" class="no-results hidden">
+            <i class="fa-regular fa-face-frown"></i>
+            <p>Препараты не найдены</p>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <img id="modalImage" src="" alt="Drug Image">
+                <div class="modal-title-block">
+                    <span id="modalCategory" class="badge">Категория</span>
+                    <h2 id="modalTitle">Название</h2>
+                    <p id="modalActiveSubstance">Действующее вещество: <span></span></p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h3>Описание</h3>
+                <p id="modalDescription">...</p>
+                <h3>Способ применения</h3>
+                <p id="modalUsage">...</p>
+                <div class="price-block">
+                    <span>Средняя цена:</span>
+                    <span id="modalPrice" class="price">0 ₽</span>
+                </div>
+            </div>
+            <button class="buy-btn" onclick="alert('Функция бронирования в разработке')">Найти в аптеках</button>
+        </div>
+    </div>
+
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
